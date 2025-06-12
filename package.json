@@ -1,0 +1,14 @@
+{
+  "name": "ooop_sem2_lab3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maklevia/ooop_sem2_lab3.git"
+  },
+  "private": true
+}
