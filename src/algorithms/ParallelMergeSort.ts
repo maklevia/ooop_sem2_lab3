@@ -24,7 +24,7 @@ export class ParallelMergeSort implements ISorter {
      */
     public async sort(data: number[]): Promise<number[]> {
         // For small arrays, use sequential sort to avoid overhead
-        if (data.length < 500) {
+        if (data.length < 1000) {
             const sequentialSorter = new (await import('./SequentialMergeSort')).SequentialMergeSort();
             return await sequentialSorter.sort(data);
         }
