@@ -11,25 +11,6 @@ A Node.js TypeScript project demonstrating sequential and parallel implementatio
 - **Comprehensive Testing**: Unit tests covering various edge cases
 - **Object-Oriented Design**: Clean, encapsulated, and maintainable code
 
-## Project Structure
-
-```
-├── src/
-│   ├── interfaces/
-│   │   └── ISorter.ts              # Strategy pattern interface
-│   ├── algorithms/
-│   │   ├── SequentialMergeSort.ts  # Sequential implementation
-│   │   └── ParallelMergeSort.ts    # Parallel implementation
-│   ├── workers/
-│   │   └── mergeSortWorker.ts      # Worker thread implementation
-│   ├── index.ts                    # Main demo
-│   └── benchmark.ts                # Performance benchmarks
-├── tests/
-│   └── SequentialMergeSort.test.ts # Unit tests
-├── package.json
-├── tsconfig.json
-└── README.md
-```
 
 ## Installation
 
