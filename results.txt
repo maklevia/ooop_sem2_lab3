@@ -1,0 +1,55 @@
+Merge Sort Benchmark Results
+============================
+
+Goal:
+-----
+Compare execution time between Sequential and Parallel Merge Sort (using 2, 4, and 8 workers)
+on arrays of different sizes. Measure speedup and efficiency.
+
+------------------------------------------------------------
+Test 1: Array with 1,000 elements
+------------------------------------------------------------
+Sequential:         1 ms
+Parallel (2 workers): 20 ms  | Speedup: 0.05x | Efficiency: 2.5%
+Parallel (4 workers): 24 ms  | Speedup: 0.04x | Efficiency: 1.0%
+Parallel (8 workers): 56 ms  | Speedup: 0.02x | Efficiency: 0.2%
+
+Conclusion: Sequential is better for small arrays.
+
+------------------------------------------------------------
+Test 2: Array with 100,000 elements
+------------------------------------------------------------
+Sequential:         19 ms
+Parallel (2 workers): 34 ms  | Speedup: 0.56x | Efficiency: 27.9%
+Parallel (4 workers): 32 ms  | Speedup: 0.59x | Efficiency: 14.8%
+Parallel (8 workers): 63 ms  | Speedup: 0.30x | Efficiency: 3.8%
+
+Conclusion: Parallel still not effective; overhead too high.
+
+------------------------------------------------------------
+Test 3: Array with 1,000,000 elements
+------------------------------------------------------------
+Sequential:         231 ms
+Parallel (2 workers): 196 ms | Speedup: 1.18x | Efficiency: 58.9%
+Parallel (4 workers): 151 ms | Speedup: 1.53x | Efficiency: 38.2%
+Parallel (8 workers): 151 ms | Speedup: 1.53x | Efficiency: 19.1%
+
+Conclusion: Parallel starts to show good results. 4 workers optimal.
+
+------------------------------------------------------------
+Test 4: Array with 10,000,000 elements
+------------------------------------------------------------
+Sequential:         3128 ms
+Parallel (2 workers): 2033 ms | Speedup: 1.54x | Efficiency: 76.9%
+Parallel (4 workers): 1313 ms | Speedup: 2.38x | Efficiency: 59.6%
+Parallel (8 workers): 1220 ms | Speedup: 2.56x | Efficiency: 32.0%
+
+Conclusion: Parallel is significantly faster. 4 or 8 workers both good.
+
+============================================================
+General Summary
+============================================================
+- Parallel Merge Sort gives real benefits only on large arrays (1M+).
+- Using too many workers can reduce efficiency.
+- Best performance seen at 4 workers for large datasets.
+- Always validate correctness of output (all passed in tests).

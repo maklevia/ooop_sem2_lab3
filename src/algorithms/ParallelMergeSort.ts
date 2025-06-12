@@ -99,7 +99,7 @@ export class ParallelMergeSort implements ISorter {
      */
     private async sortSegment(segment: number[], segmentId: number): Promise<number[]> {
         return new Promise((resolve, reject) => {
-            const worker = new Worker(path.join(__dirname, '../workers/mergeSortWorker.js'), {
+            const worker = new Worker(path.join(__dirname, '../../dist/workers/mergeSortWorker.js'), {
                 workerData: { segmentId }
             });
 
